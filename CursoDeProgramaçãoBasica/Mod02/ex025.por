@@ -1,6 +1,6 @@
 programa
 {
-	inclua biblioteca Matematica --> m
+	inclua biblioteca Matematica --> m
 	
 	funcao inicio()
 	{
@@ -10,7 +10,7 @@ programa
 		inteiro a, b, c
 		// Entrada de dados
 		escreva("Digite um valor: ")
-		leia(a)
+		leia(a)
 		escreva("Digite outro valor: ")
 		leia(b)
 		escreva("Digite mais um valor: ")
@@ -18,27 +18,37 @@ programa
 		escreva("----------------------\n")
 
 		// Estrutura
-		se(a > b){
+		se(a > b e a > c){
+			se(b > c){
+				// A,B,C
+				escreva("MAIOR: "+a)
+				escreva("\nINTERMEDIARIOS: "+b)
+				escreva("\nMENOR: "+c)
+			} senao{
+				// A,C,B
+				escreva("MAIOR: "+a)
+				escreva("\nINTERMEDIARIOS: "+c)
+				escreva("\nMENOR: "+b)
+			}
+		} senao se(b > a e b > c){
 			se(a > c){
-				se(b > c){
-					escreva("MAIOR: "+a)
-					escreva("\nINTERMEDIARIOS: "+b)
-					escreva("\nMENOR: "+c)
-				} senao{
-					escreva("MAIOR: "+a)
-					escreva("\nINTERMEDIARIOS: "+c)
-					escreva("\nMENOR: "+b)
-				}
-			}senao{
-				se(b > c){
-					escreva("MAIOR: "+a)
-					escreva("\nINTERMEDIARIOS: "+b)
-					escreva("\nMENOR: "+c)
-				} senao{
-					escreva("MAIOR: "+a)
-					escreva("\nINTERMEDIARIOS: "+c)
-					escreva("\nMENOR: "+b)
-				}
+				escreva("MAIOR: "+b)
+				escreva("\nINTERMEDIARIOS: "+a)
+				escreva("\nMENOR: "+c)
+			} senao{
+				escreva("MAIOR: "+b)
+				escreva("\nINTERMEDIARIOS: "+c)
+				escreva("\nMENOR: "+a)
+			}
+		} senao se(c > a e c > b){
+			se(a > b){
+				escreva("MAIOR: "+c)
+				escreva("\nINTERMEDIARIOS: "+a)
+				escreva("\nMENOR: "+b)
+			} senao{
+				escreva("MAIOR: "+c)
+				escreva("\nINTERMEDIARIOS: "+b)
+				escreva("\nMENOR: "+a)
 			}
 		}
 	}
@@ -48,7 +58,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 886; 
+ * @POSICAO-CURSOR = 538; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
