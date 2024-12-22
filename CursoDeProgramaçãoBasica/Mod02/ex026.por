@@ -1,9 +1,9 @@
 programa
 {
-	inclua biblioteca Tipos --> t
+	inclua biblioteca Tipos --> t
 	
 	funcao inicio()
-	{	
+	{	
 		// Titulo do Ex
 		escreva("\t { EXERCÍCIO 026 - Super Tabuada v1.0 }\n\n")
 
@@ -19,7 +19,29 @@ programa
 		escreva("\t\t=======================\n")
 		escreva("\t\tDigite sua opção => ")
 		leia(operador)
-		escreva("\t\tVocê escolheu a operação ["+operador+"]\n")
+		// Desafio proposto pelo professor para que quando eu informe um número ao inves de uma operação, apareça a operação em escreva("\t\tVocê escolheu a operação ["+operador+"]\n")
+		escolha (operador){
+			caso '1':
+			operador = '+'
+			escreva("\t\tVocê escolheu a operação ["+operador+"]\n")
+			pare
+			caso '2':
+			operador = '-'
+			escreva("\t\tVocê escolheu a operação ["+operador+"]\n")
+			pare
+			caso '3':
+			operador = '*'
+			escreva("\t\tVocê escolheu a operação ["+operador+"]\n")
+			pare
+			caso '4':
+			operador = '/'
+			escreva("\t\tVocê escolheu a operação ["+operador+"]\n")
+			pare
+			caso contrario:
+			operador = '+'
+			escreva("\t\tVocê escolheu a operação ["+operador+"]\n")
+			pare
+		}
 		escreva("Digite o primeiro número: ")
 		leia(val1)
 		escreva("Digite o segundo número: ")
@@ -52,7 +74,7 @@ programa
 				escreva("\n----------------------------------")
 				pare
 			caso contrario:
-				escreva("Não foi possível fazer tal operação. Tente novamente.")
+				escreva("\nNão foi possível fazer tal operação. Tente novamente.")
 				escreva("\n----------------------------------")
 				pare
 		}
@@ -64,7 +86,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1463; 
+ * @POSICAO-CURSOR = 1142; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
